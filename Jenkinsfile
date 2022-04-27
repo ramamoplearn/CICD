@@ -17,7 +17,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        echo 'In build'
+        echo 'In build in build'
       }
     }
 
