@@ -13,7 +13,8 @@ pipeline {
         }
         stage("Checkout Code") {
             steps {
-                checkout scm
+                //checkout scm
+                 git 'https://github.com/jglick/simple-maven-project-with-tests.git'
             }
         }
         stage("Check Code Health") {
