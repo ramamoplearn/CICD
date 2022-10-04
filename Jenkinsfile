@@ -32,7 +32,8 @@ pipeline {
         }
         stage("Run Test cases") {
             when {
-                branch 'develop';
+                //branch 'develop';
+                branch 'Kumund'
             }
            steps {
                sh "mvn clean test"
@@ -40,7 +41,8 @@ pipeline {
         }
         stage("Check Code coverage") {
             when {
-                branch 'develop'
+                //branch 'develop'
+                branch 'Kumund'
             }
             steps {
                jacoco(
@@ -55,6 +57,7 @@ pipeline {
         }
         stage("Build & Deploy Code") {
             when {
+                //branch 'master'
                 branch 'Kumund'
             }
             steps {
