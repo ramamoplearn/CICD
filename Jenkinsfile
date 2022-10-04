@@ -41,8 +41,8 @@ pipeline {
         }
         stage("Check Code coverage") {
             when {
-                //branch 'develop'
-                branch 'Kumund'
+                branch 'develop'
+                //branch 'Kumund'
             }
             steps {
                jacoco(
@@ -57,8 +57,8 @@ pipeline {
         }
         stage("Build & Deploy Code") {
             when {
-                //branch 'master'
-                branch 'Kumund'
+                branch 'master'
+                //branch 'Kumund'
             }
             steps {
                 sh "mvn tomcat7:deploy"
