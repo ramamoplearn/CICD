@@ -55,7 +55,7 @@ pipeline {
         }
         stage("Build & Deploy Code") {
             when {
-                branch 'master'
+                branch 'Kumund'
             }
             steps {
                 sh "mvn tomcat7:deploy"
