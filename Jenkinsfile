@@ -1,6 +1,6 @@
-def matchedJobs = Jenkins.instance.items.findAll { job ->
-    job.name =~ /.*_staging/
-}
+//def matchedJobs = Jenkins.instance.items.findAll { job ->
+  //  job.name =~ /.*_staging/
+//}
 
 matchedJobs.each {
   prop = it.getProperty(ParametersDefinitionProperty.class)
